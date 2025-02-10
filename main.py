@@ -3,6 +3,10 @@ from pydantic import BaseModel
 import random
 from fastapi.middleware.cors import CORSMiddleware
 
+
+
+app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allow all origins (change to frontend URL later)
@@ -11,8 +15,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-app = FastAPI()
 
 # Simulated AI datasets
 ai_datasets = ["Common Crawl", "LAION", "The Pile", "GitHub Public Data"]
